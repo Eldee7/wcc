@@ -13,6 +13,11 @@ class TestingName extends Component
     public  $password='';
 
     public function register(){
+        $this->validate([
+            'name'=>'required|min:2',
+            'email'=>'required|email|unique:users,email',
+            'password'=>'required|min:8'
+        ]);
 
         User::create([
             'name' => $this->name,
