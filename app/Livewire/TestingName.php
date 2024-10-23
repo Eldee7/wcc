@@ -24,10 +24,16 @@ class TestingName extends Component
             'email' => $this->email,
             'password' => $this->password,
         ]);
+
+        $this->reset(['name', 'email', 'password']);
+        session()->flash('message', 'User Registration Successful');
     }
 
     public function render()
     {
-        return view('livewire.testing-name');
+        return view('livewire.testing-name',
+        [
+            'users'=> User::all(),
+        ]);
     }
 }
