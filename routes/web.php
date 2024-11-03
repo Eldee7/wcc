@@ -17,4 +17,7 @@ Route::middleware([
     Route::get('/testing', function () {
         return view('livewire.testing-index');
     })->name('testing');
+    Route::get('/product', function () {
+        return view('livewire.product-index');
+    })->name('product');
 });
