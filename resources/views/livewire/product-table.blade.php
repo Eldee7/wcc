@@ -13,8 +13,8 @@
     <div>
     <h1 class="flex flex-col items-center text-4xl">PRODUCTS</h1>
 </div>
-<div class="mb-2 flex flex-col items-center">
-    <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+<div class="mb-4 flex flex-col items-center">
+    <label for="first_name" class="block mb-4 text-sm font-medium text-gray-900 dark:text-white"></label>
     <input wire:model="product_name" type="text" id="product_name" 
         class="bg-gray-50 border {{ $errors->has('product_name') ? 'border-red-500 text-red-600' : 'border-gray-300 text-gray-900' }} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 {{ $errors->has('name') ? 'dark:border-red-500 dark:text-red-500' : '' }}" 
         placeholder="Enter Product" required />
@@ -26,8 +26,8 @@
         </p>
     @enderror
 
-    <div class="mb-2 flex flex-col items-center">
-    <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+    <div class="mt-1 flex flex-col items-center">
+    <label for="first_name" class="block mt-1 text-sm font-medium text-gray-900 dark:text-white"></label>
     <input wire:model="quantity" type="number" id="quantity" 
         class="bg-gray-50 border {{ $errors->has('quantity') ? 'border-red-500 text-red-600' : 'border-gray-300 text-gray-900' }} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 {{ $errors->has('name') ? 'dark:border-red-500 dark:text-red-500' : '' }}" 
         placeholder="Quantity" required />
@@ -39,8 +39,8 @@
         </p>
     @enderror
 
-    <div class="mb-2 flex flex-col items-center">
-    <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+    <div class="mb-3 flex flex-col items-center">
+    <label for="first_name" class="block mb-5 text-sm font-medium text-gray-900 dark:text-white"></label>
     <input wire:model="price" type="number" id="price" 
         class="bg-gray-50 border {{ $errors->has('price') ? 'border-red-500 text-red-600' : 'border-gray-300 text-gray-900' }} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 {{ $errors->has('name') ? 'dark:border-red-500 dark:text-red-500' : '' }}" 
         placeholder="Price" required />
@@ -54,8 +54,8 @@
 
     <div class="flex flex-col items-center mb-7 mt-5" x-data="{ open: false, selectedOption: 'Select Condition' }">
      
-    <div class="mb-6">
-            <label for="condition" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black"></label>
+    <div class="mb-3">
+            <label for="condition" class="block mb-3 text-sm font-medium text-gray-900 dark:text-black"></label>
             <select wire:model="condition" id="condition" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                 <option value="" disabled selected>Select Condition</option>
                 <option value="New">New</option>
@@ -67,13 +67,13 @@
             @enderror
         </div>
 
-    <div class="flex flex-col items-center"> 
-    <textarea wire:model ="description"id="message" rows="4" class="block p-2.5 w-96 mb-10 mt-6 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Description"></textarea>
+    <div class="flex flex-col items-center mb-9"> 
+    <textarea wire:model ="description"id="message" rows="4" class="block p-2.5 w-96 mb-5git  mt-6 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter Description"></textarea>
     </div>
 
 
-    <div class="mb-5">
-        <button  wire:loading.remove wire:click ="add" class="relative inline-flex items-center justify-center p-0.5 mt-6 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+    <div class="mt-6">
+        <button  wire:loading.remove wire:click ="add" class="relative inline-flex items-center justify-center p-0.5 mb-7 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
 <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">Register</span></button>
 <div wire:loading role="status">
     <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-red-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +87,7 @@
 
 </div>
 
-<h1>Products</h1>
+<h1 class="mt-2 text-3xl">Product List</h1>
     <div class=" mb-10 flex flex-wrap content-center">
         <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-600">
             <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-300">
